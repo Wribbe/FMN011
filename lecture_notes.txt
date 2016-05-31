@@ -1,0 +1,330 @@
+['renumber', '../lecture_notes.txt']
+Lecture notes:
+==============
+
+000:
+====
+
+  What is numerical analysis?
+  Categorise of mathematical problems
+  Error analysis
+  Notation and accuracy
+  machine epsilon
+  correct significant digits
+  types of errors
+  loss of significance of cancellation error
+  Taylor's polynomial
+  A Taylor approximation
+
+001:
+====
+
+  Solving nonlinear equations
+  bisect method
+  bisection algorithm
+  bisection theorem
+  initial approximation
+  backward and forward errors
+  backward error vs forward error
+  fixed points
+  fixed point iteration
+  convergent iteration
+  Example: fixed point iteration
+  Stopping criteria
+
+002:
+====
+
+  Multiple roots
+  Convergence Rate
+  Newton-Raphson method
+  Convergence of Newton's method
+  Example: Newton's Method
+  Example: Multiple Roots
+  In MATLAB
+
+003:
+===
+
+  Seminar
+
+004:
+====
+
+  Linear systems
+  solving triangular linear systems
+  back substitution
+  forward substitution
+  computational complexity of substitution
+  elementary transformations
+  Gaussian elimination
+  Solving a system of equations
+  Operation count for Gauss elimination
+  Number of FLOPs for the elimination step
+  Properties of vector norms
+  Vector norms
+  Matrix norms induced by vector norms
+  Norms of some interesting matrices
+  Ill conditioning
+  Error magnification factor
+  Condition number
+  Swamping
+
+005:
+====
+
+  Triangular factorization
+  Solving a system
+  Elementary matrices
+  Properties of M_k
+  LU factorization
+  Finding LU
+  Computational complexity of LU factorization
+  Pivoting
+  Permutation matrices
+  LU decomposition with pivoting
+  Computing the inverse with LU factorization
+
+006:
+====
+
+  Curve fitting
+  Inconsistent System of Equations
+  Geometric interpretation
+  Fitting data with linear least squares
+  data fitting
+  the normal equations for Ax=b
+  example
+  least squares fitting
+  example
+  Root of mean squared error
+  Accuracy of solving the normal equations
+  periodic data
+  example
+  Plot of order 2 trigonometric polynomial
+  Orthogonal matrices vs Vandermonde
+  Gram-Schmidt Orthogonalization
+  Gram-Schmidt algorithm
+  Example: Gram-Schmidt on the columns of a matrix
+  Orthogonalization of a matrix
+  The QR-factorization
+  Orthogonal matrices and the QR-factorization
+  Example: QR-factorization by Gram-Schmidt
+  Least Squares and QR-factorization
+  Steps for least squares solving by QR-factorization
+  Example
+
+007:
+====
+
+  Seminar
+
+008:
+====
+
+  Interpolation
+  Reasons for interpolating
+  howto choose the form of the interpolating function
+  types of interpolating functions
+  the family of interpolating functions
+  polynomial interpolation
+  with the Monomial Basis
+  Example with Monomial Basis
+  The Lagrang Basis
+  Example with Lagrang Basis
+  Extrapolation
+  Exercise (interpolation vs extrapolation)
+  Accuracy of interpolation
+  Exercise
+  Placement of interpolation points
+  the Runge function
+  Chebyshev Nodes
+  Optimal error
+  Comparison of error size and distribution
+  Runge function revisited
+  Example
+  Interval transformation
+  Example x2
+
+009:
+====
+
+  Single vs. Piecwise interpolation polynomials
+  Linear piecewise polynomials
+  Splines
+  Cubic splines
+  Properties of cubic splines
+  Existence of cubic splines
+  Some types of cubic splines
+  Determining the a_i coefficients of a cubic spline
+  Determining b_i and d_i
+  Determining c_i for the natural spline
+  Matrix form of equations for c_i
+  Example
+  End conditions
+  Splines in MATLAB
+  Example: solution with a single interpolating polynomial
+  Solution with cubic spline interpolation
+
+010:
+====
+
+  Bernstein polynomials
+  Coefficients of the Bernstein polynomials
+  Properties of Bernstein polynomials
+  Bézier curves
+  Some properties of Bézier curves
+  Calculation of a point on a Bézier curve
+  The De Casteljau algorithm
+  Illustration of De Casteljau's algorithm
+  The De Casteljau array
+
+011:
+====
+
+  Seminar
+
+012 - Eigenvalues and Power iteration:
+======================================
+
+  Eigenvalues and Eigenvectors
+  Some Properties of Eigenvalues and Eigenvectors
+  Computing Eigenvalues and Eigenvectors with the Characteristic Polynomial
+  The power method
+  Normalization
+  Example: Power Method
+  The inverse power method
+  The Shifted inverse power method
+  The shifted inverse power method algorithm
+  Example: Inverse Power Method (s=0)
+
+013 - Data Linearization and the QR factorization:
+==================================================
+
+  Data linearization: the exponential model
+  Data linearization: the power law
+  Orthogonal matrices vs Vandermonde
+  Gram-Schmidt Orthogonalization
+  Gram-Schmidt algorithm
+  Example: Gram-Schmidt on the columns of a matrix
+  Orthogonalization of a matrix
+  The QR-factorization
+  Orthogonal matrices and the QR-factorization
+  Example: QR-factorization by Gram-Schmidt
+  Least Squares and QR-factorization
+  Steps for least squares solving by QR-factorization
+  Example
+
+014 - Single value decomposition:
+=================================
+
+  Singlar values and singular vectors
+  Image of the unit sphere under A
+  Eigenvalues of A^T A
+  Eigenvectors of A^T A
+  Singular Values and Singular Vectors
+  Singular Value Decomposition
+  Example: a square diagonal matrix
+  Example: a singular square matrix
+  Example: a rectangular matrix
+  SVD of symmetric matrices
+  Rank and SVD
+  Determinant and SVD
+  Inverse and SVD
+  Low rank approximation
+  Example: best rank-1 approximation
+  Compression
+  Rank 1 compression
+
+015 - Seminar 4
+===============
+
+  Seminar
+
+016 - The Fourier transform:
+============================
+
+  Complex numbers
+  Roots of unity
+  Properties of primitives roots of unity
+  Fourier matrix
+  Discrete Fourier Transform
+  Properties of primitives roots of unity
+  Fourier matrix
+  Discrete Fourier Transform
+  Inverse Fourier matrix
+  Unitary matrices
+  Operation count and the DFT in MATLAB
+  The DFT of a real vector
+  The DFT of a real vector if n is even
+  The Fast Fourier transform
+  Computation of z_k when n = 2^N
+  Tranformation int two hal-length vectors
+  Butterfly network
+  Complexity when n is not a power of 2
+  Fast inverse Fourier transform
+  DFT interpolation
+  Interpolation with DFT
+  DFT interpolation theorem
+  Order n trigonometric function
+  Expansion of n data points to p > n points
+  Evaluation of trigonometric functions
+  Example
+  in MATLAB
+  Example of FFT in MATLAB
+  Fourier interpolation in MATLAB
+
+017 -  Applications of the FFT:
+===============================
+
+  Trigonometric interpolation of data
+  Orthogonal Function interpolation
+  Example
+  Least squares with DFT
+  The normal equations
+  Filtering
+  Least squares in MATLAB
+  Example: low-pass filter with m=4 and m=6
+  Audio filtering
+  Handle's Hallelujah
+  Compression 2:1
+  Noise removal
+
+018:
+====
+
+  Discrete cosine transform
+  Trigonometric interpolation
+  Least squares with DCT
+  2D discrete cosine transform
+  Matrix for of the 2D DCT and its inverse
+  2D-DCT interpolation and least ssquares
+  The DCT in Matlab
+  Image compression
+  Crude scompression: replace each 4x3 pixel block by the average
+  DCT compression
+  Quantization
+  Quantization matrix
+  Linear quantization
+  Hilbert matrix
+  Best quantization matrix
+  Compression due to quantization
+  Color images
+  Lossless compression
+
+019 - Huffman coding:
+=====================
+
+  Lossless compression
+  Huffman coding
+  Huffman coding for JPEG
+  Huffman coding for the DC component
+  Huffman coding for the AC component
+  Example for AC components
+  Huffman coding for the AC components
+  Example for AC components
+
+020 - Seminar 5
+===============
+
+  Seminar
