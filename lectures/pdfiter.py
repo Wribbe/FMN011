@@ -48,7 +48,6 @@ def renumber(filename):
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    print(args)
     if "renumber" in args:
         renumber(args[1])
     else:
