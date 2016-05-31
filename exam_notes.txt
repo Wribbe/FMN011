@@ -1,0 +1,298 @@
+# 2015/06/03
+#===========
+
+  What is a vector norm?
+  ---
+  XXVectorNorm
+
+  Vector norm for distances?
+  ---
+  XXVectorNorm
+
+  Vector norm for door hight that fits every person?
+  ---
+  XXVectorNorm
+
+  Vector norm for residual after least squares fitting?
+  ---
+  XXVectorNorm
+
+  Vector nor ensure values of error vector < 10^-3?
+  ---
+  XXVectorNorm
+
+  Calculate squares a rook needs to move into spec. pos?
+  ---
+  XXVectorNorm
+
+  x - 0.5y = (h(x) + h(y))/20
+  What iteration methods to solve? And which method:
+  (a) x_n+1 = x_n - f_(x_n)/f'(x_n)
+  (b) x_n+1 = Ax_n
+  (c) x_n+1 = g(x_n)
+  ---
+  XXIteration
+
+  Rate of convergence?
+  ---
+  XXConvergence
+
+  Problem with 7 ite. res. in errors:
+  [ 0.6 0.54 0.45 0.4 0.14 0.028 0.0012 ]
+  calculate rate. conve.
+  ||e_k+1||<= c \dot ||e_k||^r
+  ---
+  XXIteration, XXConvergence
+
+  What does the backslash operation in matlab do?
+  ---
+  XXMatlab
+
+  What is an orthogonal basis?
+  ---
+  XXOrthogonal, XXBasis
+
+  Orthogonal basis for subspace spanned by vectors (1,1,0) and (2,0,3).
+  ---
+  XXOrthogonal, XXBasis
+
+  Let A invertible real nxn, prove that eigenval. of A and A^T are the same.
+  (det(A) == det(A^T))
+  ---
+  XXDeterminant, XXEigenValue
+
+  Prove if LA non-zero eigv. of A (inv, real, nxn) then 1/LA eigv. of A^-1.
+  ---
+  XXProof, XXEigenValue, XXReal, XXLambda
+
+  Prove that if A is orth.ma. -> real eigenv. are +/-1
+  ---
+  XXProof, XXMatrix, XXOrthogonal, XXReal, XXEigenValue
+
+  There is 1 unq. poly. of deg. n that interp. n data points?
+  ---
+
+  Interp. is usually not appro. if data points are subj. to exper. errors?
+  ---
+  XXInterpolation, XXExperimental
+
+  In high-deg. polyno.inter. curve may wiggle so much that will not pass through
+  all data points?
+  ---
+  XXPolynomial XXInterpolation
+
+  Inteprol. using Chebyshev bunch data near center of interval?
+  ---
+  XXInterpolation, XXChebyshev
+
+  Piecewise polynomial of deg. k that is continuously differentiable k times ->
+  spline?
+  ---
+  XXSpline
+
+  What additional conditions should be added to determine a cubic spline
+  interpolant to some data points?
+  ---
+  XXInterpolation
+
+  How can you tell which of two matrices was real and symmetric after QR
+  iteration has been applied?
+  ---
+  XXMatrix, XXAttributes,
+
+  What is unnormalized power method?
+  ---
+  XXNormalization
+
+  For an nxn matrix, unnormalized power method (x_i+1 = Ax_i), how many
+  operations to carry out k steps?
+  ---
+  XXSteps, XXComplexity
+
+  What is DFT?
+  ---
+  XXDFT
+
+  Computing the DFT does not req. the sol. of a nxn lin.system by matrix
+  factorization in order to det. the coeffi. of the basis functions, why?
+  ---
+  XXDFT
+
+  Computing DFT, what is the worst-case computational complexity? For what values
+  of n is this case?
+  ---
+  XXDFT
+
+  Computing DFT, what is the best-case computational complexity? For what values
+  of n is this case?
+  ---
+  XXDFT
+
+  What is the difference, if any, between best and worst case computational
+  complexity in calculating DFT.
+  ---
+  XXDFT
+
+  What is Huffman coding?
+  ---
+  XXHuffman
+
+  Construct Huffman code for:
+  5 3 2 2
+  3 4 1 1
+  1 4 0 0
+  0 0 0 0
+  ---
+  XXHuffman
+
+  A, mxn, real,
+  | 0   A | u | = LA| u ]
+  | A^t 0 | v |     | v |
+  show that |LA| is a singular value of A
+  ---
+
+  What types of compression are used in JPEG?
+  ---
+  XXCompression
+
+# 2013/06/13
+#===========
+
+  What is fixed point iteration?
+  ---
+  XXFixedPoint, XXIteration
+
+
+  Fixed point; 23 iter. for cos(x), 206 iter. for cos^2(x), why?
+  ---
+  XXFixedPoint, XXIteration
+
+  Newton-Raphson's method?
+  x_i+1 = X_i - (f(x_i)/f'(x_i))
+  ---
+  XXNewtonRaphson
+
+  Convergence for NewtRaph root x=2 for:
+  f(x) = (x-1)(x-2)^2
+  ---
+  XXNewtonRaphson, XXConvergence
+
+  Convergence for NewtRaph root x=2 for:
+  f(x) = (x-1)^2(x-2)
+  ---
+  XXNewtonRaphson, XXConvergence
+
+  Write explicit formula for NewtRaph iteration for solving (x-1)(x-2)^2=0.
+  ---
+  XXNewtonRaphson, XXIteration
+
+  How is Ax=b solved by using LU factorization with pivoting?
+  ---
+  XXFactorization, XXLU, XXPivoting
+
+  Describe computational complexity of each main step when solving Ax=b by LU
+  factorization with pivoting.
+  ---
+  XXFactorization, XXLU, XXPivoting, XXComplexity
+
+  Find the infinity-norm condition number of A = [[1 1.0001]`, [1 1]`].
+  ---
+  XXVectorNorm, XXConditionNumber, XXMatrix
+
+  Find the error and the residual for approx. sol. (-1 3)^T when b = (2
+  2.001)^T when A = [[1 1.0001]`, [1 1]`].
+  ---
+  XXResidual, XXError, XXMatrix
+
+  What vector satisfies ||A||_\inf = ||A_x||_\inf/||x||_\inf given
+  A = [[1 1.0001]`, [1 1]`]?
+  ---
+  XXMatrix, XXVector, XXSolve
+
+  Gauss=Seidel iter.meth. with matrix form -(L+D)^(-1)U used to solve Ax=b
+  system. A strict. diagonally dom. 10^5x10^5 matrix that has 4x10^5 non-zero
+  entries (4/row).
+  One iteration step of this method would require how many operations? (approx)
+  ---
+  XXGaussSeidel, XXMatrixForm, XXDiagonallyDominant, XXNonZeroEntries, XXMatrix
+
+  Gauss=Seidel iter.meth. with matrix form -(L+D)^(-1)U used to solve Ax=b
+  system. A strict. diagonally dom. 10^5x10^5 matrix that has 4x10^5 non-zero
+  entries (4/row).
+  How many operations (order) is required by Guassian elimination?
+  ---
+  XXGaussSeidel, XXMatrixForm, XXDiagonallyDominant, XXNonZeroEntries, XXMatrix
+  XXGuassian, XXElimination
+
+  Gauss=Seidel iter.meth. with matrix form -(L+D)^(-1)U used to solve Ax=b
+  system. A strict. diagonally dom. 10^5x10^5 matrix that has 4x10^5 non-zero
+  entries (4/row).
+  Guass-Seidel requires 100 iterations, how many for Guassian elimination?
+  ---
+  XXGaussSeidel, XXMatrixForm, XXDiagonallyDominant, XXNonZeroEntries, XXMatrix
+  XXGuassian, XXElimination
+
+  Interpolation error function e(x) = (f^(n)(\omega)/n!)(x-x1)(x-x2)...(x-xn)
+  xi chosen as Chebyshev points, what function is minimized?
+  ---
+  XXChebyshev, XXInterpolation, XXError, XXFunction
+
+  The QR factorization of a matrix is unique?
+  ---
+  XXFactorization, XXQR
+
+  Given M = orthogonal matrix, is ||x||_p = ||M_x||_p for all positive integers
+  p?
+  ---
+  XXOrthogonal, XXMatrix, XXAttributes
+
+  Household reflector matrix is symmetrical and orthogonal?
+  ---
+  XXMatrix, XXAttributes, XXSymmetry, XXOrthogonal, XXHousehold, XXReflector
+
+  A is nxn matrix, calculate.
+  Smallest magnitude eigenvalue and corresponding eigenvector.
+  ---
+  XXEigenValue, XXEigenVector
+
+  A is nxn matrix, calculate.
+  Largest magnitude eigenvalue and corresponding eigenvector.
+  ---
+  XXEigenValue, XXEigenVector
+
+  A is nxn matrix, calculate.
+  A's eigenvalue closest to scalar B.
+  ---
+  XXEigenValue, XXEigenVector
+
+  A is nxn matrix, calculate.
+  All eigenvalues and eigenvectors for A.
+  ---
+  XXEigenValue, XXEigenVector
+
+  Explain how you can plot the trigonometric polynomial
+  P(t) = (a_0/\sqrt(8) ...
+  that interpolates points (j,x_j),j = 0,...7; x_j tillhör R using discrete
+  Fourier transform.
+  ---
+  XXDFT, XXPlot, XXCalculation
+
+  How is discrete cosine transform and quantization used together for image
+  compression?
+  ---
+  XXCompression, XXQuantization, XXCosine, XXTransform
+
+  Shannon information I = -\sum(k, i=1)p_(i)log2pi, draw Huffman tree.
+  ---
+  XXHuffman, XXTree, XXShannon, XXInformation
+
+  Shannon information I = -\sum(k, i=1)p_(i)log2pi, convert the message:
+  COY KNOWS PSEUDONOISE CODES to a bistream using huffman coding.
+  ---
+  XXHuffman, XXTree, XXShannon, XXInformation, XXBit XXStream
+
+  Shannon information I = -\sum(k, i=1)p_(i)log2pi, whit message:
+  COY KNOWS PSEUDONOISE CODES to a bistream using huffman coding what is the
+  average number of bits needed per symbol?
+  ---
+  XXHuffman, XXTree, XXShannon, XXInformation, XXBit XXStream

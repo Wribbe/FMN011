@@ -1,0 +1,437 @@
+Full table of contents:
+=======================
+
+0 - fundamentals
+  0.1 - evaluating a polynomial - 1
+  0.2 - binary numbers - 5
+    0.2.1 - decimal to binary - 6
+    0.2.2 - binary to decimal - 7
+  0.3 - floating point representation of real numbers - 8
+    0.3.2 - Machine representation - 11
+    0.3.3 - Addition of floating point numbers - 13
+  0.4 - Loss off significance - 16
+  0.5 - Review of calculus - 19
+1 - Solving Equations - 24
+  1.1 - The bisection method - 25
+    1.1.1 - Bracketing a root - 25
+    1.1.2 - How accurate and how fast? - 28
+  1.2 - Fixed point iteration - 30
+    1.2.1 - Fixed points of a function - 31
+    1.2.2 - Geometry of Fixed-Point iteration - 33
+    1.2.3 - Linear convergence of Fixed-Point iteration - 34
+    1.2.4 - Stopping criteria - 40
+  1.3 - Limits of accuracy - 43
+    1.3.1 - Forward and backward error - 44
+    1.3.2 - The Wilkinson polynomial - 47
+    1.3.3 - Sensitivity of root-finding - 48
+  1.4 - Newton's method - 51
+    1.4.1 - Quadratic convergence of Newton's Method - 53
+    1.4.2 - Linear convergence of Newton's Method - 55
+  1.5 - Root-finding without derivatives - 61
+    1.5.1 - Secant Method and variants - 61
+    1.5.2 - Brent's Method - 64
+2 - Systems of equations - 71
+  2.1 - Gaussian Elimination - 71
+    2.1.1 - Naive Gaussian Elimination - 72
+    2.1.2 - Operation counts - 74
+  2.2 - The LU factorization - 79
+    2.2.1 - Matrix form of Gaussian elimination - 79
+    2.2.2 - Back substitution with the LU factorization - 81
+    2.2.3 - Complexity of the LU factorization - 83
+  2.3 - Sources of error - 85
+    2.3.1 - Error magnification and condition number - 86
+    2.3.2 - Swamping - 91
+  2.4 - The PA = LU Factorization - 95
+    2.4.1 - Partial pivoting - 95
+    2.4.2 - Permutation matrices - 97
+    2.4.3 - PA = LU factorization - 98
+  2.5 - Iterative methods - 106
+    2.5.1 - Jacobi Method - 106
+    2.5.2 - Gauss-Seidel Method and SOR - 108
+    2.5.3 - Convergence of iterative methods - 111
+    2.5.4 - Sparse matrix computations -  113
+  2.6 - Methods for symmetric positive-define matrices - 117
+    2.6.1 - Symmetric positive-definite matrices - 117
+    2.6.2 - Cholesky factorization - 119
+    2.6.3 - Conjugate Gradient Method - 121
+    2.6.4 - Preconditioning - 126
+  2.7 - Nonlinear systems of equations - 130
+    2.7.1. Multivariate Newton's Method - 131
+3 - Interpolation - 138
+  3.1 - Data and interpolation functions - 139
+    3.1.1 - Lagrange interpolation - 140
+    3.1.2 - Newton's divided differences - 141
+    3.1.3 - How many degree d polynomials pass through n points? - 144
+    3.1.4 - Code for interpolation - 145
+    3.1.5 - Representing functions by approximations polynomials - 147
+  3.2 - Interpolation error - 151
+    3.2.1 - Interpolation error formula - 151
+    3.2.2 - Proof of Newton form and error formula - 153
+    3.2.3 - Runge phenomenon - 155
+  3.3 - Chebyshev interpolation - 158
+    3.3.1 - Chebyshev's theorem - 158
+    3.3.2 - Chebyshev polynomials - 160
+    3.3.3 - Change of interval - 162
+  3.4 - Cubic splines - 166
+    3.4.1 - Properties of splines - 167
+    3.4.2 - Endpoint conditinos - 173
+  3.5 - Bézier curves - 179
+4 - Least squares - 188
+  4.1 - Least squares and the normal equations - 188
+    4.1.1 - Inconsistent system of equations - 189
+    4.1.2 - Fitting models to data - 193
+    4.1.3 - Conditioning of least squares - 197
+  4.2 - A survey of models - 201
+    4.2.1 - Periodic data - 201
+    4.2.2 - Data linearization - 203
+  4.3 - QR factorization - 212
+    4.3.1 - Gram-Schmidt orthogonalization and least squares - 212
+    4.3.2 - Modified Gram-Schmidt orthogonalization - 218
+    4.3.3 - Household reflectors - 220
+  4.4 - Generalized Minimum Residual (GMRES) method - 225
+    4.4.1 - Krylov methods - 226
+    4.4.2 - Preconditioned GMRES - 228
+  4.5 - Nonlinear least squares - 230
+    4.5.1 - Gauss-Newton Method - 230
+    4.5.2 - Models with nonlinear parameters - 233
+    4.5.3 - The Lavenberg-Marquart Method - 235
+5 - Numerical differentiation and integration - 243
+  5.1 - Numerical Differentiation - 244
+    5.1.1 - Finite difference formulas - 244
+    5.1.2 - Rounding error - 247
+    5.1.3 - Extrapolation - 249
+    5.1.4 - Symbolic differentiation and integration - 250
+  5.2 - Newton-Cotes formulas for numerical integration - 254
+    5.2.1 - Trapezoid rule - 255
+    5.2.2 - Simpson's rule - 257
+    5.2.3 - Composite Newton-Cotes formulas - 259
+    5.2.4 - Open Newton-Cotes methods - 262
+  5.3 - Romberg integration - 265
+  5.4 - Adaptive quadrature - 269
+  5.5 - Gaussian quadrature - 273
+6 - Ordinary differential equations - 281
+  6.1 - Initial value problems - 282
+    6.1.1 - Euler's method - 283
+    6.1.2 - Existence, uniqueness, and continuity for solutions - 287
+    6.1.3 - Fist-order linear equations - 290
+  6.2 - Analysis of IVP solvers - 293
+    6.2.1 - Local and global truncation error - 293
+    6.2.2 - The explicit trapezoid method - 297
+    6.2.3 - Taylors methods - 300
+  6.3 - Systems of ordinary differential equations - 303
+    6.3.1 - Higher order equations - 304
+    6.3.2 - Computer simulation: the pendulum - 305
+    6.3.3 - Computer simulation: orbital mechanics - 309
+  6.4 - Runge-Kutta methods and applications - 314
+    6.4.1 - The Runge-Kutta family - 314
+    6.4.2 - Computer simulation: the Hodkgin-Huxley neuron - 317
+    6.4.3 - Computer simulation: the Lorenz equations - 319
+  6.5 - Variable step-size methods - 325
+    6.5.1 - Embedded Runge-Kutta pairs - 325
+    6.5.2 - Order 4/5 methods - 328
+  6.6 - Implicit methods and stiff equations - 332
+  6.7 - Multistep methods - 336
+    6.7.1 - Generating multistep methods - 336
+    6.7.2 - Explicit multistep methods - 339
+    6.7.3 - Implicit multistep methods - 342
+7 - Boundary Value Problems - 348
+  7.1 - Shooting method - 349
+    7.1.1 - Solutions of boundary value problems - 349
+    7.1.2 - Shooting Method implementation - 352
+  7.2 - Finite difference methods - 357
+    7.2.1 - Linear boundary value problems - 357
+    7.2.2 - Nonlinear boundary value problems - 359
+  7.3 - Collocation and the finite element method - 365
+    7.3.1 - Collocation - 365
+    7.3.2 - Finite elements and the Galerkin Method - 367
+8 - Partial differential equations - 374
+  8.1 - Parabolic equations - 375
+    8.1.1 - Forward difference method - 375
+    8.1.2 - Stability analysis of forward difference method - 379
+    8.1.3 - Backward difference method - 380
+    8.1.4 - Crank-Nicolson method - 385
+  8.2 - Hyperbolic equations - 393
+    8.2.1 - The wave equation - 393
+    8.2.2 - The CFL condition - 395
+  8.3 - Elliptic equations - 398
+    8.3.1 - Finite difference method for elliptic equations - 399
+    8.3.2 - Finite element method for elliptic equations - 406
+  8.4 - Nonlinear partial differential equations - 417
+    8.4.1 - Implicit Newton solver - 417
+    8.4.2 - Nonlinear equations in two space dimensions - 423
+9 - Random numbers and applications - 431
+  9.1 - Random numbers - 432
+    9.1.1 - Pseudo random numbers - 432
+    9.1.2 - Exponential and normal random numbers - 437
+  9.2 - Monte Carlo simulation - 440
+    9.2.1 - Power laws for Monte Carlo estimation - 440
+    9.2.2 - Quasi-random numbers - 442
+  9.3 - Discrete and continuous Brownian motion - 446
+    9.3.1 - Random walks - 447
+    9.3.2 - Continuous Brownian motion - 449
+  9.4 - Stochastic differential equations - 452
+    9.4.1 - Adding noise to differential equations - 452
+    9.4.2 - Numerical methods for SDEs - 456
+10 - Trigonometric interpolation and the FFT - 467
+  10.1 - The Fourier transform - 468
+    10.1.1 - Complex arithmetic - 468
+    10.1.2 - Discrete Fourier transform - 470
+    10.1.3 - The fast Fourier transform - 473
+  10.2 - Trigonometric interpolation - 476
+    10.2.1 - The DFT interpolation theorem - 476
+    10.2.2 - Efficient evaluation of trigonometric functions - 479
+  10.3 - The FFT and signal processing - 483
+    10.3.1 - Orthogonality and interpolation - 483
+    10.3.2 - Least squares fitting with trigonometric functions - 485
+    10.3.3 - Sound, noise and filtering - 489
+11 - Compression - 495
+  11.1 - The discrete cosine transform - 496
+    11.1.1 - One-dimensional DCT - 496
+    11.1.2 - The DCT and least squares approximation - 496
+  11.2 - Two-dimensional DCT and image compression - 501
+    11.2.1 - Two-dimensional DCT - 501
+    11.2.2 - Image compression - 505
+    11.2.3 - Quantization - 508
+  11.3 - Huffman coding - 514
+    11.3.1 - Information theory and coding - 514
+    11.3.2 - Huffman coding for the JPEG format - 517
+  11.4 - Modified DCT and audio compression - 519
+    11.4.1 - Modified discrete cosine transform - 520
+    11.4.2 - Bit quantization - 525
+12 - Eigenvalues and singular values - 531
+  12.1 - Power iteration methods - 531
+    12.1.1 - Power iteration - 532
+    12.1.2 - Convergence of Power iteration - 534
+    12.1.3 - Inverse power iteration - 535
+    12.1.4 - Rayleigh quotient iteration - 537
+  12.2 - QR algorithm - 539
+    12.2.1 - Simultaneous iteration - 539
+    12.2.2 - Real Schur form and the QR algorithm - 542
+    12.2.3 - Upper Hessenberg form - 544
+  12.3 - Singular value decomposition - 552
+    12.3.1 - Finding the SVD in general - 554
+    12.3.2 - Special case: symmetric matrices - 555
+  12.4 - Applications of the SVD - 557
+    12.4.1 - Properties of the SVD - 557
+    12.4.2 - Dimensional reduction - 559
+    12.4.3 - Compression - 560
+    12.4.4 - calculating the SVD - 561
+
+Notes:
+======
+
+  0 - fundamentals
+    0.1 - evaluating a polynomial - 1
+    0.2 - binary numbers - 5
+      0.2.1 - decimal to binary - 6
+      0.2.2 - binary to decimal - 7
+    0.3 - floating point representation of real numbers - 8
+      0.3.2 - Machine representation - 11
+      0.3.3 - Addition of floating point numbers - 13
+    0.4 - Loss off significance - 16
+    0.5 - Review of calculus - 19
+  1 - Solving Equations - 24
+    1.1 - The bisection method - 25
+      1.1.1 - Bracketing a root - 25
+      1.1.2 - How accurate and how fast? - 28
+    1.2 - Fixed point iteration - 30
+      1.2.1 - Fixed points of a function - 31
+      1.2.2 - Geometry of Fixed-Point iteration - 33
+      1.2.3 - Linear convergence of Fixed-Point iteration - 34
+      1.2.4 - Stopping criteria - 40
+    1.3 - Limits of accuracy - 43
+      1.3.1 - Forward and backward error - 44
+      1.3.2 - The Wilkinson polynomial - 47
+      1.3.3 - Sensitivity of root-finding - 48
+    1.4 - Newton's method - 51
+      1.4.1 - Quadratic convergence of Newton's Method - 53
+      1.4.2 - Linear convergence of Newton's Method - 55
+    1.5 - Root-finding without derivatives - 61
+      1.5.1 - Secant Method and variants - 61
+      1.5.2 - Brent's Method - 64
+  2 - Systems of equations - 71
+    2.1 - Gaussian Elimination - 71
+      2.1.1 - Naive Gaussian Elimination - 72
+      2.1.2 - Operation counts - 74
+    2.2 - The LU factorization - 79
+      2.2.1 - Matrix form of Gaussian elimination - 79
+      2.2.2 - Back substitution with the LU factorization - 81
+      2.2.3 - Complexity of the LU factorization - 83
+    2.3 - Sources of error - 85
+      2.3.1 - Error magnification and condition number - 86
+      2.3.2 - Swamping - 91
+    2.4 - The PA = LU Factorization - 95
+      2.4.1 - Partial pivoting - 95
+      2.4.2 - Permutation matrices - 97
+      2.4.3 - PA = LU factorization - 98
+    2.5 - Iterative methods - 106
+      2.5.1 - Jacobi Method - 106
+      2.5.2 - Gauss-Seidel Method and SOR - 108
+      2.5.3 - Convergence of iterative methods - 111
+      2.5.4 - Sparse matrix computations -  113
+    2.6 - Methods for symmetric positive-define matrices - 117
+      2.6.1 - Symmetric positive-definite matrices - 117
+      2.6.2 - Cholesky factorization - 119
+      2.6.3 - Conjugate Gradient Method - 121
+      2.6.4 - Preconditioning - 126
+    2.7 - Nonlinear systems of equations - 130
+      2.7.1. Multivariate Newton's Method - 131
+  3 - Interpolation - 138
+    3.1 - Data and interpolation functions - 139
+      3.1.1 - Lagrange interpolation - 140
+      3.1.2 - Newton's divided differences - 141
+      3.1.3 - How many degree d polynomials pass through n points? - 144
+      3.1.4 - Code for interpolation - 145
+      3.1.5 - Representing functions by approximations polynomials - 147
+    3.2 - Interpolation error - 151
+      3.2.1 - Interpolation error formula - 151
+      3.2.2 - Proof of Newton form and error formula - 153
+      3.2.3 - Runge phenomenon - 155
+    3.3 - Chebyshev interpolation - 158
+      3.3.1 - Chebyshev's theorem - 158
+      3.3.2 - Chebyshev polynomials - 160
+      3.3.3 - Change of interval - 162
+    3.4 - Cubic splines - 166
+      3.4.1 - Properties of splines - 167
+      3.4.2 - Endpoint conditinos - 173
+    3.5 - Bézier curves - 179
+  4 - Least squares - 188
+    4.1 - Least squares and the normal equations - 188
+      4.1.1 - Inconsistent system of equations - 189
+      4.1.2 - Fitting models to data - 193
+      4.1.3 - Conditioning of least squares - 197
+    4.2 - A survey of models - 201
+      4.2.1 - Periodic data - 201
+      4.2.2 - Data linearization - 203
+    4.3 - QR factorization - 212
+      4.3.1 - Gram-Schmidt orthogonalization and least squares - 212
+      4.3.2 - Modified Gram-Schmidt orthogonalization - 218
+      4.3.3 - Household reflectors - 220
+    4.4 - Generalized Minimum Residual (GMRES) method - 225
+      4.4.1 - Krylov methods - 226
+      4.4.2 - Preconditioned GMRES - 228
+    4.5 - Nonlinear least squares - 230
+      4.5.1 - Gauss-Newton Method - 230
+      4.5.2 - Models with nonlinear parameters - 233
+      4.5.3 - The Lavenberg-Marquart Method - 235
+  5 - Numerical differentiation and integration - 243
+    5.1 - Numerical Differentiation - 244
+      5.1.1 - Finite difference formulas - 244
+      5.1.2 - Rounding error - 247
+      5.1.3 - Extrapolation - 249
+      5.1.4 - Symbolic differentiation and integration - 250
+    5.2 - Newton-Cotes formulas for numerical integration - 254
+      5.2.1 - Trapezoid rule - 255
+      5.2.2 - Simpson's rule - 257
+      5.2.3 - Composite Newton-Cotes formulas - 259
+      5.2.4 - Open Newton-Cotes methods - 262
+    5.3 - Romberg integration - 265
+    5.4 - Adaptive quadrature - 269
+    5.5 - Gaussian quadrature - 273
+  6 - Ordinary differential equations - 281
+    6.1 - Initial value problems - 282
+      6.1.1 - Euler's method - 283
+      6.1.2 - Existence, uniqueness, and continuity for solutions - 287
+      6.1.3 - Fist-order linear equations - 290
+    6.2 - Analysis of IVP solvers - 293
+      6.2.1 - Local and global truncation error - 293
+      6.2.2 - The explicit trapezoid method - 297
+      6.2.3 - Taylors methods - 300
+    6.3 - Systems of ordinary differential equations - 303
+      6.3.1 - Higher order equations - 304
+      6.3.2 - Computer simulation: the pendulum - 305
+      6.3.3 - Computer simulation: orbital mechanics - 309
+    6.4 - Runge-Kutta methods and applications - 314
+      6.4.1 - The Runge-Kutta family - 314
+      6.4.2 - Computer simulation: the Hodkgin-Huxley neuron - 317
+      6.4.3 - Computer simulation: the Lorenz equations - 319
+    6.5 - Variable step-size methods - 325
+      6.5.1 - Embedded Runge-Kutta pairs - 325
+      6.5.2 - Order 4/5 methods - 328
+    6.6 - Implicit methods and stiff equations - 332
+    6.7 - Multistep methods - 336
+      6.7.1 - Generating multistep methods - 336
+      6.7.2 - Explicit multistep methods - 339
+      6.7.3 - Implicit multistep methods - 342
+  7 - Boundary Value Problems - 348
+    7.1 - Shooting method - 349
+      7.1.1 - Solutions of boundary value problems - 349
+      7.1.2 - Shooting Method implementation - 352
+    7.2 - Finite difference methods - 357
+      7.2.1 - Linear boundary value problems - 357
+      7.2.2 - Nonlinear boundary value problems - 359
+    7.3 - Collocation and the finite element method - 365
+      7.3.1 - Collocation - 365
+      7.3.2 - Finite elements and the Galerkin Method - 367
+  8 - Partial differential equations - 374
+    8.1 - Parabolic equations - 375
+      8.1.1 - Forward difference method - 375
+      8.1.2 - Stability analysis of forward difference method - 379
+      8.1.3 - Backward difference method - 380
+      8.1.4 - Crank-Nicolson method - 385
+    8.2 - Hyperbolic equations - 393
+      8.2.1 - The wave equation - 393
+      8.2.2 - The CFL condition - 395
+    8.3 - Elliptic equations - 398
+      8.3.1 - Finite difference method for elliptic equations - 399
+      8.3.2 - Finite element method for elliptic equations - 406
+    8.4 - Nonlinear partial differential equations - 417
+      8.4.1 - Implicit Newton solver - 417
+      8.4.2 - Nonlinear equations in two space dimensions - 423
+  9 - Random numbers and applications - 431
+    9.1 - Random numbers - 432
+      9.1.1 - Pseudo random numbers - 432
+      9.1.2 - Exponential and normal random numbers - 437
+    9.2 - Monte Carlo simulation - 440
+      9.2.1 - Power laws for Monte Carlo estimation - 440
+      9.2.2 - Quasi-random numbers - 442
+    9.3 - Discrete and continuous Brownian motion - 446
+      9.3.1 - Random walks - 447
+      9.3.2 - Continuous Brownian motion - 449
+    9.4 - Stochastic differential equations - 452
+      9.4.1 - Adding noise to differential equations - 452
+      9.4.2 - Numerical methods for SDEs - 456
+  10 - Trigonometric interpolation and the FFT - 467
+    10.1 - The Fourier transform - 468
+      10.1.1 - Complex arithmetic - 468
+      10.1.2 - Discrete Fourier transform - 470
+      10.1.3 - The fast Fourier transform - 473
+    10.2 - Trigonometric interpolation - 476
+      10.2.1 - The DFT interpolation theorem - 476
+      10.2.2 - Efficient evaluation of trigonometric functions - 479
+    10.3 - The FFT and signal processing - 483
+      10.3.1 - Orthogonality and interpolation - 483
+      10.3.2 - Least squares fitting with trigonometric functions - 485
+      10.3.3 - Sound, noise and filtering - 489
+  11 - Compression - 495
+    11.1 - The discrete cosine transform - 496
+      11.1.1 - One-dimensional DCT - 496
+      11.1.2 - The DCT and least squares approximation - 496
+    11.2 - Two-dimensional DCT and image compression - 501
+      11.2.1 - Two-dimensional DCT - 501
+      11.2.2 - Image compression - 505
+      11.2.3 - Quantization - 508
+    11.3 - Huffman coding - 514
+      11.3.1 - Information theory and coding - 514
+      11.3.2 - Huffman coding for the JPEG format - 517
+    11.4 - Modified DCT and audio compression - 519
+      11.4.1 - Modified discrete cosine transform - 520
+      11.4.2 - Bit quantization - 525
+  12 - Eigenvalues and singular values - 531
+    12.1 - Power iteration methods - 531
+      12.1.1 - Power iteration - 532
+      12.1.2 - Convergence of Power iteration - 534
+      12.1.3 - Inverse power iteration - 535
+      12.1.4 - Rayleigh quotient iteration - 537
+    12.2 - QR algorithm - 539
+      12.2.1 - Simultaneous iteration - 539
+      12.2.2 - Real Schur form and the QR algorithm - 542
+      12.2.3 - Upper Hessenberg form - 544
+    12.3 - Singular value decomposition - 552
+      12.3.1 - Finding the SVD in general - 554
+      12.3.2 - Special case: symmetric matrices - 555
+    12.4 - Applications of the SVD - 557
+      12.4.1 - Properties of the SVD - 557
+      12.4.2 - Dimensional reduction - 559
+      12.4.3 - Compression - 560
+      12.4.4 - calculating the SVD - 561
