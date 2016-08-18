@@ -5,42 +5,325 @@ Lecture notes:
 ====
 
   What is numerical analysis?
+
+    What is numerical analysis?
+    ---
+    A way to solve problems approximately.
+
+    What are some problems that can't be solved exactly?
+    ---
+    Solving non-linear equations and differential equations exactly is hard.
+
+    Why are non-linear eq/systems hard to solve?
+    ---
+    TODO
+
   Categorise of mathematical problems
+
+    What are numerical methods?
+    ---
+    Methods of approximating a exact solution.
+
+    Algebra + linear computable?
+    ---
+    Yes
+
+    Algebra + non-linear computable?
+    ---
+    Nope
+
+    Analysis + linear computable?
+    ---
+    Nope
+
+    Analysis + non-linear computable?
+    ---
+    Nope
+
+    #TODO: Add more information about why yes/no computable.
+
   Error analysis
+
+    What is a mathematical analytical (closed) solution?
+    ---
+    A analytical solution implies that the answer can be written as a exact
+    mathematical expression. A closed solution implies that the evaluation
+    takes a finite amount of operations and uses operations from a "well-known"
+    set.
+
+    What is a numerical solution?
+    ---
+    A solution that approximates the analytical solution. The "correctness" of
+    the approximation is defined by how small the error is.
+
+    What kind of error types are there?
+    ---
+    Absolute and relative errors.
+
+    What is an absolute error?
+    ---
+    E_p = |p - p^|
+    where p^ is an approximation of p.
+
+    What is a relative error?
+    ---
+    R_p = (|p - p^)/|p|
+
   Notation and accuracy
+
+    #TODO: Make questions
+
   machine epsilon
+
+    What is the machine epsilon?
+    ---
+    The smallest amount a computer can add to another number and make a
+    difference.
+
+    What does the machine epsilon give a bound to?
+    ---
+    When representing a number in floating point it gives a bound of the
+    relative error.
+    #TODO: Why does it give a bound to relative error?
+
   correct significant digits
+
+    What does significant digits mean?
+    ---
+    How accurate a estimate is, the number of correct digits after the comma.
+
   types of errors
+
+    What 3 types of approximation error are there?
+    ---
+    Noise - Error in data or model.
+    Round-of - limited resolution/bits when representing real numbers.
+    Truncation - Replacing formula with easier/numerically solvable formula.
+
+    Source of noise error?
+    ---
+    Error in data or model.
+
+    Source of Round-of error?
+    ---
+    Limited resolution/space for representing real number in computers.
+
+    Source of Truncation error?
+    ---
+    Changing a formula to a easier/computable one.
+
   loss of significance of cancellation error
+
+    What is loss of Significance?
+    ---
+    When subtracting similarly sized numbers.
+
+    Why does loss of significance exist?
+    ---
+    Subtracting two digits with x precision where the x-1 digit differs, leaves
+    a number that is only precise to 1 significant digit.
+
+    What is another word for Cancelation Error?
+    ---
+    Loss of significance
+
   Taylor's polynomial
+
+    #TODO Questions for slides about Taylors polynomial.
+
   A Taylor approximation
+
+    #TODO Questions.
 
 001:
 ====
 
   Solving nonlinear equations
+
+    What is the point of the "try-to-estimate-interest-example" in the
+    introduction to bisection method?
+    ---
+    Shows that it's possible to "guess" and get bounds on what variable is
+    needed to come close to the answer.
+
   bisect method
+
+    What is the bisection method?
+    ---
+    A systematic way to close in on when a linear function hits a specific
+    value by under- and over-shooting in iterations.
+
   bisection algorithm
+
+    #TODO implement in python.
+
   bisection theorem
+
+    Bisection theorem: f is _____ in [a,b]:
+    ---
+    f is continuous in [a,b]
+
+    Bisection theorem: f(r) = _ for some r in [a,b]:
+    ---
+    f(r) = 0 for some r in [a,b]
+
+    Bisection theorem: f(a) and f(b) have ______ signs:
+    ---
+    f(a) and f(b) have opposite signs.
+
   initial approximation
+
+    #INFO: Can be done graphically... ?
+
   backward and forward errors
+
+    What is backward error?
+    ---
+    Backward error is the difference that needs to be added to the
+    approximation to make the evaluation hit the exact value.
+
+    What is forward error?
+    ---
+    The forward error is the difference between the approximation and the
+    actual value that is needed to achieve the exact result. Since the actual
+    solution is seldom known, it's hard to calculate.
+
+    What is backward error?
+    ---
+    The backward error is the difference between the function value calculated
+    with the approximation and what was expected. "How does the function need
+    to change to produce the actual answer with the given approximation?"
+
   backward error vs forward error
+
+    What can be a problem with flat curves?
+    ---
+    There can be multiple roots present.
+
   fixed points
+
+    x is a fixed point of the function g if x = ___?
+    ---
+    The input to the function equals the output of the function.
+    -> if x = g(x), the intersection between y=x and y=(g(x)).
+
   fixed point iteration
+
+    What is so special with fixed point iteration?
+    ---
+    The iteration will converge towards a specific value if the right start
+    conditions are fulfilled.
+
+    A fixed point iteration has the form ____________ ?
+    ---
+    Fixed point iteration on the form p_(k+1) = g(p_k), the next value comes
+    from putting the previous value into the function.
+
+    What are the constraints on the function g(x) in [a,b] for a fixed point
+    iteration? (Fixed point iteration Theorem) [function and derivates?]
+    ---
+    The function and it's derivate must be continuous inside the interval a-b.
+
+    What are the constraints on the function g(x) in [a,b] for a fixed point
+    iteration? (Fixed point iteration Theorem) [results of g(x) and x?]
+    ---
+    All results of g(x) where x is in [a,b] must also be in [a,b].
+
+    What are the constraints on the function g(x) in [a,b] for a fixed point
+    iteration? (Fixed point iteration Theorem) [starting point p_0?]
+    ---
+    The starting point p_0 needs to be inside the interval [a,b].
+
+    If the function fulfills the Fixed Point Iteration Theorem, what are the
+    bounds for the derivative to ensure convergence?
+    ---
+    Fulfilling the Fixed Iteration theorem, the function derivative needs to be
+    some value K, where K < 1, to converge towards a fixed value.
+
+    What happens if a fixed point iteration on g(x) has g'(x) > 1?
+    ---
+    The iteration won't converge.
+
   convergent iteration
+
+    #pass
+
   Example: fixed point iteration
+
+    What can fixed point iteration be used for?
+    ---
+    Given a function that needs to be solved for 0. Rearrange the function so
+    that it solves for x and fulfills the Fixed Point Iteration Theorem and
+    solve it iteratively.
+
   Stopping criteria
+
+    #TODO, unclear what this means.
 
 002:
 ====
 
   Multiple roots
+
+    Consequence of a root having multiplicity 3 at 0?
+    ---
+    For a given x and f(), f(x) = f'(x) = f''(x) = 0. The derivatives for the
+    multiplicity-1 are also roots.
+
   Convergence Rate
+
+    What method must be used to solve non-linear equations?
+    ---
+    Iterative methods must be used to solve non-linear equations.
+    #TODO: Why?
+
+    How many types of convergence rates are there for iterative methods?
+    ---
+    3 convergence rates.
+
+    What does "f(p)=0 let e_k = p_k - p" signify in a iterative context?
+    ---
+    e_k is the difference between the p_k and p. In other words, e_k determines
+    how far away the iteration is from resolving to 0 at step k, the smaller
+    the e_k, the closer to convergence. The method converges if lim|k->\inf
+    ||e_k|| = 0.
+
+    What are the attributes for linear iterative convergence?
+    ---
+    ||e_(k+1)|| <= c*||e_k|| && 0 < c < 1, This mens that for each iteration,
+    e_k, the distance to the convergence point is reduced by a linear amount,
+    since the constant c is smaller than 1.
+
+    What are the attributes for superlinear iterative convergence?
+    ---
+    ||e_(k+1)|| <= c*||e_k||^r && 0 < c < 1 && r > 1
+
   Newton-Raphson method
+
+    What is the point-slope formula for the line equation?
+    ---
+    y + f(x_0) = f'(x_0)(x-x_0)
+
+    What is the root to a function f(x)?
+    ---
+    The root x is the value x that produces f(x) = 0.
+
   Convergence of Newton's method
+
+    #TODO understand slides + questions.
+
   Example: Newton's Method
+
+    # pass
+
   Example: Multiple Roots
+
+    # pass
+
   In MATLAB
+
+    # pass
+
 
 003:
 ===
@@ -51,7 +334,61 @@ Lecture notes:
 ====
 
   Linear systems
+
+    How is the linear system Ax=b defined?
+    ---
+    A is a nxn matrix, b is a n-length vector and x is a n-length solution
+    vector.
+
+    What is the consequence if A is singlar in the system Ax=b?
+    ---
+    Then the system either has infinitely many solutions or none at all.
+
+    Another word for invertible A?
+    ---
+    A is non-singular or nondegenerate.
+
+    Another word for non-singular A?
+    ---
+    A is invertible or nondegenerate.
+
+    When does A not have an inverse?
+    ---
+    when it's determinant, det(A) = 0, then the following will not hold:
+    AB = BA = I where B is the inverse to A denoted A^-1.
+
+    What is determined by the matrix determinant?
+    ---
+    If the matrix determinant det(A) != 0, then the matrix is invertible.
+
+    How is the determinant of a 2x2 matrix calculated?
+    ---
+    given A = [[a b][c d]] -> det(A) = ad - bc.
+
+    What is a matrix rank?
+    ---
+    It's a matrix property that shows how many linearly independent rows and
+    columns a matrix has.
+
+    What is full rank?
+    ---
+    All the rows and columns in the matrix are linearly independent.
+
+    If A is any of: invertible, det(A)!=0 or full rank the unique solutions to
+    Ax = 0 is _____?
+    ---
+    Then A is non-singular and the unique solution to Ax = 0 is x = 0.
+
+    If A is non-singular/invertible/nondegenerate, Ax = b has ________?
+    ---
+    If A is invertible then Ax = b has a unique solution.
+
   solving triangular linear systems
+
+    What is upper triangle form of a linear system?
+    ---
+    Each element that is below the diagonal is zero.
+
   back substitution
   forward substitution
   computational complexity of substitution
