@@ -10,7 +10,8 @@ def main():
     FNULL = open(os.devnull, 'w')
 
     pdfs = sorted([filename for filename in os.listdir('.') if '.pdf' in filename])
-    message = "Start at specific lecture? (default=000): "
+    total = len(pdfs)
+    message = "Start at specific lecture? Total: {:03d} (default=000): ".format(total)
 
     start_at = input(message).strip()
     if start_at:
@@ -22,16 +23,17 @@ def main():
                 pdfs=pdfs[index:]
                 break
 
-    for filename in pdfs:
+    for current, filename in enumerate(pdfs, start=1):
         command = "evince {}".format(filename).split()
         process = subprocess.Popen(command,
                 stderr=FNULL,
                 stdout=subprocess.PIPE,)
 
         process.communicate()
-        message = "Continue with next? y/n: "
-        display_next = input(message).lower().strip() == 'y'
-        if not display_next:
+        position = "Next: {:03d}/{:03d}".format(current, total)
+        message = "{}, end iteration? y/n (default=n): ".format(position)
+        exit = input(message).lower().strip() == 'y'
+        if exit:
             break
 
 def renumber(filename):
